@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Touch Examples</title>
+
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="dist/assets/css/main.min.css">
+
+        <script type="text/javascript">htmlStartTime = Date.now();</script>
+    </head>
+    <body>
+        <h1>Web Experiments</h1>
+        <ul>
+            <li>
+                <a href="side-nav/">Side Nav</a>
+            </li>
+            <li>
+                <a href="swipeable-cards/">Swipeable Cards</a>
+            </li>
+        </ul>
+        <script type="text/javascript">
+            (function() {
+                // Load time
+                loadTime = Date.now();
+            }())
+
+            window.addEventListener('load', function() {
+                // Window Load time
+                windowLoadTime = Date.now();
+            });
+
+            document.onreadystatechange = function() {
+                if (document.readyState === 'interactive') {
+                    // Interactive DOM time
+                    interactiveDOMTime = Date.now();
+                } else if (document.readyState === 'complete') {
+                    // Complete DOM time
+                    completeDOMTime = Date.now();
+                }
+            }
+        </script>
+        <script type="text/javascript">applicationStartTime=Date.now();</script>
+        <!--<script src="dist/lib/deps.min.js"></script>
+        <script src="dist/assets/js/main.min.js"></script>-->
+        <script type="text/javascript">jsStartTime=Date.now();</script>
+    </body>
+</html>
